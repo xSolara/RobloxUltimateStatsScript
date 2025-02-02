@@ -22,19 +22,19 @@ TextButton2.Parent = ScreenGui
 TextButton3.Parent = ScreenGui
 TextButton4.Parent = ScreenGui
 
-TextButton1:TweenPosition(UDim2.new(0,144,0,50),"Out","Sine",1)
+TextButton1:TweenPosition(UDim2.new(0,144,0,-1),"Out","Sine",1)
 TextButton1:TweenSize(UDim2.new(0,70,0,70),"Out","Sine",1)
 TextButton1.BackgroundTransparency = 0.6
 
-TextButton2:TweenPosition(UDim2.new(0,50,0,50),"Out","Sine",1)
+TextButton2:TweenPosition(UDim2.new(0,50,0,-1),"Out","Sine",1)
 TextButton2:TweenSize(UDim2.new(0,70,0,70),"Out","Sine",1)
 TextButton2.BackgroundTransparency = 0.6
 
-TextButton3:TweenPosition(UDim2.new(0,144,0,5),"Out","Sine",1)
+TextButton3:TweenPosition(UDim2.new(0,144,0,80),"Out","Sine",1)
 TextButton3:TweenSize(UDim2.new(0,70,0,70),"Out","Sine",1)
 TextButton3.BackgroundTransparency = 0.6
 
-TextButton4:TweenPosition(UDim2.new(0,50,0,5),"Out","Sine",1)
+TextButton4:TweenPosition(UDim2.new(0,50,0,80),"Out","Sine",1)
 TextButton4:TweenSize(UDim2.new(0,70,0,70),"Out","Sine",1)
 TextButton4.BackgroundTransparency = 0.6
 
