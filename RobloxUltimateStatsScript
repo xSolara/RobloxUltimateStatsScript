@@ -1,0 +1,78 @@
+-- Ölünce Butonlar Yok olur Tekrar Execute yap Ölünce
+-- If you die the buttons disappears Execute Again when you are dead
+
+local plr = game.Players.LocalPlayer
+local chr = plr.Character
+local Humanoid = chr:FindFirstChild("Humanoid")
+
+local ParentGui = game.CoreGui
+local ScreenGui = Instance.new("ScreenGui")
+local TextButton1 = Instance.new("TextButton")
+local TextButton2 = Instance.new("TextButton")
+local TextButton3 = Instance.new("TextButton")
+local TextButton4 = Instance.new("TextButton")
+
+ScreenGui.Parent = ParentGui
+
+TextButton1.Name = "T1"
+TextButton2.Name = "T2"
+
+TextButton1.Parent = ScreenGui
+TextButton2.Parent = ScreenGui
+TextButton3.Parent = ScreenGui
+TextButton4.Parent = ScreenGui
+
+TextButton1:TweenPosition(UDim2.new(0,144,0,50),"Out","Sine",1)
+TextButton1:TweenSize(UDim2.new(0,70,0,70),"Out","Sine",1)
+TextButton1.BackgroundTransparency = 0.6
+
+TextButton2:TweenPosition(UDim2.new(0,50,0,50),"Out","Sine",1)
+TextButton2:TweenSize(UDim2.new(0,70,0,70),"Out","Sine",1)
+TextButton2.BackgroundTransparency = 0.6
+
+TextButton3:TweenPosition(UDim2.new(0,144,0,5),"Out","Sine",1)
+TextButton3:TweenSize(UDim2.new(0,70,0,70),"Out","Sine",1)
+TextButton3.BackgroundTransparency = 0.6
+
+TextButton4:TweenPosition(UDim2.new(0,50,0,5),"Out","Sine",1)
+TextButton4:TweenSize(UDim2.new(0,70,0,70),"Out","Sine",1)
+TextButton4.BackgroundTransparency = 0.6
+
+TextButton1.Text = "+10 Walk Speed"
+TextButton2.Text = "-10 Walk Speed"
+TextButton3.Text = "+10 Jump Power"
+TextButton4.Text = "-10 Jump Power"
+
+TextButton1.TextScaled = true
+TextButton2.TextScaled = true
+TextButton3.TextScaled = true
+TextButton4.TextScaled = true
+
+
+TextButton1.MouseButton1Click:Connect(function()
+Humanoid.WalkSpeed = Humanoid.WalkSpeed + 10
+
+end)
+
+TextButton2.MouseButton1Click:Connect(function()
+Humanoid.WalkSpeed = Humanoid.WalkSpeed - 10
+
+end)
+
+TextButton3.MouseButton1Click:Connect(function()
+Humanoid.JumpPower = Humanoid.JumpPower + 10
+
+end)
+
+TextButton4.MouseButton1Click:Connect(function()
+Humanoid.JumpPower = Humanoid.JumpPower - 10
+
+end)
+
+while wait(1) do
+if Humanoid.Health == 0 then
+ScreenGui:Destroy()
+end
+end
+-- Ölünce Butonlar Yok Olur Tekrar Execute yap Ölünce
+-- If you die the buttons disappears Execute Again when you are dead
